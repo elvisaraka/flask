@@ -1,0 +1,62 @@
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign Up Form</title>
+        <!--<link rel="stylesheet" href="normalize.css"> -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='normalize.css') }}">
+        <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+
+      <form action="{{ url_for('registration_action') }}"
+ method="post">
+      
+        <h1>Sign Up</h1>
+        
+        <fieldset>
+          <legend><span class="number">1</span>Your basic info</legend>
+          <div >
+            {% if error %}
+                <p class="error "><strong class="text-danger">Error:</strong> {{ error }}</p>
+            {% endif %}
+
+            
+          </div>
+          <label for="name">Registration Number:</label>
+          <input type="text" id="name" name="registration_number">
+          
+          <label for="mail">Full Name:</label>
+          <input type="text" id="mail" name="student_names">
+          <label for="mail">National ID Number:</label>
+          <input type="number" id="mail" name="nationalIdNumber">
+        <fieldset>
+        <label for="School">School:</label>
+        <select id="job" name="school">
+          
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="php_developor">PHP Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="rails_developer"> Rails Developer</option>
+            <option value="web_designer">Web Designer</option>
+            <option value="WordPress_developer">WordPress Developer</option>
+          
+        </select>
+        <label for="School">Program:</label>
+        <select id="job" name="program">
+          
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="php_developor">PHP Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="rails_developer"> Rails Developer</option>
+            <option value="web_designer">Web Designer</option>
+            <option value="WordPress_developer">WordPress Developer</option>
+          
+        </select>
+        
+          
+        <button type="submit">Sign Up</button>
+      </form>
+      
+    </body>
+</html>

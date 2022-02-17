@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Start Up</title>
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,600" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/style.css') }} ">
+	<script src="https://unpkg.com/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+    <div class="body-wrap">
+        <header class="site-header">
+            <div class="container">
+                <div class="site-header-inner">
+                    <div class="brand header-brand">
+                        <h1 class="m-0">
+							<a href="#">
+								<center><img class="header-logo-image" src="{{ url_for('static', filename='dist/images/maseno.png') }} " alt="Logo" style="width: 30%;height:30%">
+                                </center>
+                            </a>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="container">
+                    <div class="hero-inner">
+						<div class="hero-copy">
+	                        <h1 class="hero-title mt-0">Maseno Startup</h1>
+	                        
+	                        <div class="hero-cta"><a class="button button-primary" href="{{ url_for('login') }}">Login</a><a class="button" href="{{ url_for('registration') }}">SignUp</a></div>
+						</div>
+						
+                    </div>
+                </div>
+            
+
+            
+
+			
+        </main>
+
+        
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+</html>
